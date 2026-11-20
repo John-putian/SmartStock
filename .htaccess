@@ -1,0 +1,13 @@
+Options -Indexes
+
+# Friendly default document
+DirectoryIndex index.php
+
+<FilesMatch "\.(sql|zip|log|ini|cmd|py|md)$">
+  Require all denied
+</FilesMatch>
+
+# The home-screen manifest. Without an explicit type and charset Apache serves
+# it as plain latin-1 text and the install prompt shows mangled punctuation.
+AddType application/manifest+json .webmanifest
+AddCharset UTF-8 .webmanifest

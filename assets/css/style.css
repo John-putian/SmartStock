@@ -1,0 +1,445 @@
+/* =====================================================================
+   SMART STOCK  —  A&A Surplus
+   Inventory, Sales & Decision Support System
+
+   Interface theme derived from the A&A Surplus badge: hinomaru red,
+   sumi (ink) black, and warm washi paper.
+   ===================================================================== */
+
+:root {
+  /* Brand — sampled directly from the logo */
+  --aa-red:        #c41114;   /* hinomaru red, the rising sun disc      */
+  --aa-red-dark:   #96090c;   /* pressed / hover                        */
+  --aa-red-deep:   #6d0508;   /* deepest, for gradients                 */
+  --aa-red-tint:   #fdecec;   /* soft wash for badges and highlights    */
+
+  --aa-ink:        #101010;   /* sumi black, the mountain               */
+  --aa-ink-2:      #1f1d1c;   /* raised ink, for gradients              */
+  --aa-ink-soft:   #2e2b29;
+
+  --aa-paper:      #f4f1ec;   /* washi — the app background             */
+  --aa-line:       #e4ded5;   /* hairline borders                       */
+  --aa-text:       #221f1d;
+  --aa-muted:      #7a726a;
+
+  /* Semantic (kept distinct from the brand red so alerts still read) */
+  --aa-gold:       #b8860b;
+  --aa-jade:       #2f7d4f;
+  --aa-indigo:     #2b4c7e;
+
+  --sidebar-w:     252px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--aa-paper);
+  color: var(--aa-text);
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14.5px;
+}
+
+a { text-decoration: none; }
+
+/* ---------------------------------------------------- Bootstrap re-skin */
+.btn-primary {
+  --bs-btn-bg: var(--aa-red);            --bs-btn-border-color: var(--aa-red);
+  --bs-btn-hover-bg: var(--aa-red-dark); --bs-btn-hover-border-color: var(--aa-red-dark);
+  --bs-btn-active-bg: var(--aa-red-deep);--bs-btn-active-border-color: var(--aa-red-deep);
+  --bs-btn-disabled-bg: #d98a8b;         --bs-btn-disabled-border-color: #d98a8b;
+}
+.btn-outline-primary {
+  --bs-btn-color: var(--aa-red);         --bs-btn-border-color: var(--aa-red);
+  --bs-btn-hover-bg: var(--aa-red);      --bs-btn-hover-border-color: var(--aa-red);
+  --bs-btn-active-bg: var(--aa-red-dark);--bs-btn-active-border-color: var(--aa-red-dark);
+}
+.btn-success {
+  --bs-btn-bg: var(--aa-jade);           --bs-btn-border-color: var(--aa-jade);
+  --bs-btn-hover-bg: #26663f;            --bs-btn-hover-border-color: #26663f;
+}
+.nav-pills {
+  --bs-nav-pills-link-active-bg: var(--aa-red);
+}
+.nav-pills .nav-link { color: var(--aa-ink); }
+.nav-pills .nav-link:hover { color: var(--aa-red); }
+
+a, .card a:not(.btn):not(.list-group-item):not(.text-dark) { color: var(--aa-red); }
+a:hover { color: var(--aa-red-dark); }
+
+.form-control:focus, .form-select:focus {
+  border-color: #e08a8b;
+  box-shadow: 0 0 0 .2rem rgba(196, 17, 20, .13);
+}
+.progress-bar { background-color: var(--aa-red); }
+.text-primary { color: var(--aa-red) !important; }
+.bg-primary   { background-color: var(--aa-red) !important; }
+.form-check-input:checked { background-color: var(--aa-red); border-color: var(--aa-red); }
+
+/* -------------------------------------------------------------- sidebar */
+.aa-sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: var(--sidebar-w);
+  background:
+    radial-gradient(560px 300px at 50% -8%, rgba(196, 17, 20, .30), transparent 68%),
+    linear-gradient(180deg, var(--aa-ink) 0%, var(--aa-ink-2) 62%, #17100f 100%);
+  color: #cfc7bf;
+  display: flex;
+  flex-direction: column;
+  z-index: 1040;
+  overflow-y: auto;
+  border-right: 3px solid var(--aa-red);
+}
+
+.aa-brand {
+  padding: 18px 16px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, .10);
+  text-align: center;
+}
+.aa-brand img { width: 96px; height: 96px; display: block; margin: 0 auto 9px; }
+.aa-brand .wordmark {
+  color: #fff; font-weight: 800; font-size: .96rem;
+  letter-spacing: .18em; text-transform: uppercase; line-height: 1.2;
+}
+.aa-brand .wordmark em {
+  display: block; font-style: normal; color: var(--aa-red);
+  font-size: .82rem; letter-spacing: .26em; margin-top: 2px;
+}
+.aa-brand small {
+  display: block; color: #8b817a; font-size: .69rem;
+  margin-top: 7px; line-height: 1.45;
+}
+
+.aa-nav { padding: 12px 10px 24px; flex: 1; }
+.aa-nav .label {
+  font-size: .66rem; text-transform: uppercase; letter-spacing: .16em;
+  color: #6d635c; padding: 15px 10px 6px; font-weight: 700;
+}
+.aa-nav a {
+  display: flex; align-items: center; gap: 11px;
+  padding: 9px 11px; margin-bottom: 2px;
+  border-radius: 7px; color: #cfc7bf; font-size: .9rem;
+  border-left: 3px solid transparent;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.aa-nav a i { font-size: 1.02rem; width: 18px; text-align: center; }
+.aa-nav a:hover { background: rgba(255, 255, 255, .06); color: #fff; }
+.aa-nav a.active {
+  background: linear-gradient(90deg, rgba(196, 17, 20, .95), rgba(150, 9, 12, .55));
+  border-left-color: #fff; color: #fff; font-weight: 600;
+}
+.aa-nav a .badge { margin-left: auto; font-size: .68rem; }
+
+.aa-user {
+  border-top: 1px solid rgba(255, 255, 255, .10);
+  padding: 12px 14px; display: flex; align-items: center; gap: 10px;
+}
+.aa-user .avatar {
+  width: 34px; height: 34px; border-radius: 50%; flex: none;
+  background: var(--aa-red); color: #fff;
+  display: grid; place-items: center; font-weight: 700; font-size: .8rem;
+}
+.aa-user .name { color: #fff; font-size: .85rem; font-weight: 600; line-height: 1.2; }
+.aa-user .role { color: #8b817a; font-size: .72rem; }
+
+/* -------------------------------------------------------------- content */
+.aa-main { margin-left: var(--sidebar-w); min-height: 100vh; }
+
+.aa-topbar {
+  background: #fff; border-bottom: 1px solid var(--aa-line);
+  box-shadow: inset 0 -3px 0 rgba(196, 17, 20, .10);
+  padding: 13px 26px; display: flex; align-items: center; gap: 16px;
+  position: sticky; top: 0; z-index: 1020;
+}
+.aa-topbar h1 {
+  font-size: 1.16rem; font-weight: 750; margin: 0;
+  letter-spacing: .01em; color: var(--aa-ink);
+}
+.aa-topbar .sub { color: var(--aa-muted); font-size: .79rem; margin-top: 2px; }
+
+.aa-content { padding: 22px 26px 60px; }
+
+/* ---------------------------------------------------------------- cards */
+.card {
+  border: 1px solid var(--aa-line); border-radius: 10px;
+  background: #fff; box-shadow: 0 1px 2px rgba(16, 16, 16, .05);
+}
+.card-header {
+  background: #fff; border-bottom: 1px solid var(--aa-line);
+  font-weight: 650; padding: 13px 16px; border-radius: 10px 10px 0 0 !important;
+  color: var(--aa-ink);
+}
+.card-header i { color: var(--aa-red); }
+
+.kpi {
+  background: #fff; border: 1px solid var(--aa-line); border-radius: 10px;
+  padding: 16px 18px; height: 100%; position: relative; overflow: hidden;
+}
+.kpi::before {                     /* a sliver of the rising sun */
+  content: ""; position: absolute; inset: 0 auto 0 0; width: 3px;
+  background: var(--aa-red); opacity: .85;
+}
+.kpi .k-label {
+  color: var(--aa-muted); font-size: .72rem; text-transform: uppercase;
+  letter-spacing: .1em; font-weight: 700;
+}
+.kpi .k-value { font-size: 1.6rem; font-weight: 750; line-height: 1.25; margin-top: 4px; color: var(--aa-ink); }
+.kpi .k-foot  { font-size: .76rem; color: var(--aa-muted); margin-top: 3px; }
+.kpi .k-icon  { width: 40px; height: 40px; border-radius: 9px; display: grid; place-items: center; font-size: 1.15rem; }
+
+.i-blue   { background: var(--aa-red-tint); color: var(--aa-red); }
+.i-green  { background: #e6f2ea; color: var(--aa-jade); }
+.i-amber  { background: #fbf1dc; color: var(--aa-gold); }
+.i-red    { background: var(--aa-red-tint); color: var(--aa-red); }
+.i-purple { background: #e8edf5; color: var(--aa-indigo); }
+
+/* --------------------------------------------------------------- tables */
+.table { font-size: .88rem; margin-bottom: 0; }
+.table > thead > tr > th {
+  background: #faf8f5; color: var(--aa-muted);
+  font-size: .71rem; text-transform: uppercase; letter-spacing: .08em;
+  font-weight: 700; border-bottom: 2px solid var(--aa-line); white-space: nowrap;
+}
+.table > tbody > tr > td { vertical-align: middle; }
+.table-hover > tbody > tr:hover > * { background: #fdf7f6; }
+
+.badge-soft-success   { background: #e6f2ea; color: var(--aa-jade); }
+.badge-soft-warning   { background: #fbf1dc; color: #8a6508; }
+.badge-soft-danger    { background: var(--aa-red-tint); color: var(--aa-red); }
+.badge-soft-info      { background: #e8edf5; color: var(--aa-indigo); }
+.badge-soft-secondary { background: #ece7e0; color: #5c554e; }
+.badge-soft-primary   { background: var(--aa-red-tint); color: var(--aa-red); }
+
+.mono { font-family: "Consolas", "SF Mono", ui-monospace, monospace; font-size: .84em; }
+
+/* ------------------------------------------------------------------ POS */
+.pos-grid { display: grid; grid-template-columns: 1fr 380px; gap: 18px; align-items: start; }
+.pos-item {
+  border: 1px solid var(--aa-line); border-radius: 9px; padding: 11px 12px;
+  background: #fff; cursor: pointer; height: 100%;
+  transition: border-color .15s, box-shadow .15s, transform .1s;
+}
+.pos-item:hover {
+  border-color: var(--aa-red);
+  box-shadow: 0 3px 12px rgba(196, 17, 20, .14);
+  transform: translateY(-1px);
+}
+.pos-item.disabled { opacity: .45; pointer-events: none; }
+
+/* Product photograph on a POS tile. Second-hand stock is one-of-a-kind, so
+   this is the actual unit, not a catalogue picture. */
+.pos-photo {
+  position: relative; width: 100%; aspect-ratio: 1 / 1;
+  border-radius: 7px; overflow: hidden; background: #f2eee8;
+  display: grid; place-items: center;
+}
+.pos-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pos-photo .ph { font-size: 2rem; color: #b9aea3; }
+.pos-photo .tag-stock {
+  position: absolute; top: 6px; left: 6px; font-size: .6rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .18);
+}
+.pos-photo .tag-class {
+  position: absolute; bottom: 6px; right: 6px; font-size: .6rem;
+  font-weight: 700; letter-spacing: .04em; color: #fff;
+  background: rgba(16, 16, 16, .78); backdrop-filter: blur(2px);
+}
+.cls-class-a   { background: rgba(47, 125, 79, .92) !important; }
+.cls-class-b   { background: rgba(43, 76, 126, .92) !important; }
+.cls-class-c   { background: rgba(184, 134, 11, .94) !important; }
+.cls-for-parts { background: rgba(90, 84, 78, .92) !important; }
+
+/* Inventory list thumbnail */
+.inv-thumb {
+  width: 44px; height: 44px; border-radius: 6px; overflow: hidden;
+  background: #f2eee8; display: grid; place-items: center;
+  border: 1px solid var(--aa-line); color: #b9aea3;
+}
+.inv-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Large photograph on the item detail and edit screens */
+.item-hero {
+  width: 230px; height: 230px; flex: none;
+  border-radius: 10px; overflow: hidden; background: #f2eee8;
+  border: 1px solid var(--aa-line);
+  display: grid; place-items: center; color: #b9aea3; font-size: 2.6rem;
+}
+.item-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pos-item .nm { font-weight: 600; font-size: .85rem; line-height: 1.3; color: var(--aa-ink); }
+.pos-item .pr { color: var(--aa-red); font-weight: 750; }
+.pos-cart { position: sticky; top: 88px; }
+.cart-line { border-bottom: 1px dashed var(--aa-line); padding: 9px 0; }
+.cart-line:last-child { border-bottom: 0; }
+
+.totals-row { display: flex; justify-content: space-between; padding: 3px 0; font-size: .9rem; }
+.totals-row.grand {
+  font-size: 1.3rem; font-weight: 750; color: var(--aa-ink);
+  border-top: 2px solid var(--aa-red); margin-top: 8px; padding-top: 8px;
+}
+
+/* -------------------------------------------------------------- receipt */
+.receipt {
+  max-width: 380px; margin: 24px auto; background: #fff; padding: 24px 24px 26px;
+  border: 1px solid var(--aa-line); border-radius: 6px;
+  border-top: 4px solid var(--aa-red);
+  font-family: "Consolas", ui-monospace, monospace; font-size: 13px; color: #111;
+}
+.receipt .logo { width: 76px; height: 76px; display: block; margin: 0 auto 8px; }
+.receipt h2 { font-size: 14px; text-align: center; margin: 0 0 2px; letter-spacing: .06em; }
+.receipt .cut { border-top: 1px dashed #999; margin: 10px 0; }
+.receipt table { width: 100%; }
+.receipt td { padding: 2px 0; vertical-align: top; }
+
+/* ---------------------------------------------------------------- print */
+@media print {
+  @page { size: A4 portrait; margin: 12mm; }
+
+  .aa-sidebar, .aa-topbar, .no-print, .btn { display: none !important; }
+  .aa-main { margin-left: 0; }
+  .aa-content { padding: 0; }
+  body { background: #fff; font-size: 12px; }
+  .card { border: 0; box-shadow: none; }
+  .kpi::before { display: none; }
+  .print-only { display: block !important; }
+
+  /* Column headings repeat on every sheet. Without this, the second page of a
+     long report is a wall of unlabelled numbers and the person holding it has
+     to flip back to page one to find out what each column means. */
+  thead { display: table-header-group; }
+  tfoot { display: table-footer-group; }
+  .table > thead > tr > th {
+    background: #eee !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+
+  /* Nothing gets sliced in half by a page break: not a row, not a figure,
+     not a summary box. */
+  tr, img, .card, .kpi, .sumbox { break-inside: avoid; page-break-inside: avoid; }
+
+  /* A heading never prints as the last line of a page with its table
+     stranded on the next one. */
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+
+  /* Links keep their text only - a printed sheet full of raw URLs is noise. */
+  a[href]::after { content: none !important; }
+}
+.print-only { display: none; }
+
+/* ---------------------------------------------------------------- login */
+.login-wrap {
+  min-height: 100vh; display: grid; grid-template-columns: 1.05fr .95fr;
+  background: var(--aa-paper);
+}
+.login-hero {
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(760px 520px at 26% 34%, rgba(196, 17, 20, .55), transparent 62%),
+    linear-gradient(160deg, #0b0b0b 0%, var(--aa-ink-2) 55%, #1a1110 100%);
+  color: #fff; padding: 52px 58px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.login-hero::after {                 /* the hinomaru disc, quietly */
+  content: ""; position: absolute; right: -140px; bottom: -160px;
+  width: 460px; height: 460px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(196, 17, 20, .34), rgba(196, 17, 20, 0) 70%);
+}
+.login-hero > * { position: relative; z-index: 1; }
+.login-hero h1 { font-size: 2rem; font-weight: 750; line-height: 1.24; }
+.login-hero .feat { display: flex; gap: 12px; margin-top: 16px; align-items: flex-start; }
+.login-hero .feat i { color: var(--aa-red); font-size: 1.15rem; margin-top: 2px; }
+.login-hero .hero-logo { width: 116px; height: 116px; }
+
+.login-card { display: flex; align-items: center; justify-content: center; padding: 40px; }
+.login-card .inner { width: 100%; max-width: 380px; }
+.login-card .mark-sm { width: 76px; height: 76px; }
+
+@media (max-width: 991px) {
+  .login-wrap { grid-template-columns: 1fr; }
+  .login-hero { display: none; }
+  .pos-grid { grid-template-columns: 1fr; }
+  .aa-sidebar { transform: translateX(-100%); transition: transform .2s; }
+  .aa-sidebar.open { transform: none; }
+  .aa-main { margin-left: 0; }
+}
+
+/* --------------------------------------------------------- misc helpers */
+.chart-box { position: relative; height: 300px; }
+.chart-box.sm { height: 220px; }
+.text-muted-sm { color: var(--aa-muted); font-size: .8rem; }
+.progress-thin { height: 6px; }
+.qr-box svg { width: 100%; height: auto; }
+
+/* ------------------------------------------------------ unit barcodes */
+/* Chips listing the exact pieces in the current sale. */
+.unit-chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.unit-chip {
+  font-family: "Consolas", ui-monospace, monospace; font-size: .66rem;
+  background: var(--aa-red-tint); color: var(--aa-red);
+  border-radius: 4px; padding: 1px 5px; display: inline-flex; gap: 5px; align-items: center;
+}
+.unit-chip a { color: var(--aa-red); font-weight: 700; text-decoration: none; opacity: .6; }
+.unit-chip a:hover { opacity: 1; }
+
+/* ----------------------------------------------------- notification bell */
+/* The unread count sits on the bell itself rather than beside it, so the
+   top bar keeps its height whether or not anything is waiting. */
+.notif-dot {
+  position: absolute; top: -6px; right: -6px;
+  font-size: .62rem; padding: .18em .42em; line-height: 1;
+}
+.notif-menu { width: 380px; max-width: 92vw; padding: 0; border-radius: 10px; }
+.notif-item { white-space: normal; padding: .6rem .9rem; border-bottom: 1px solid var(--aa-line); }
+.notif-item:last-of-type { border-bottom: 0; }
+.notif-item.is-unread { background: var(--aa-red-tint); }
+.notif-item.is-unread:hover { background: var(--aa-red-tint); filter: brightness(.97); }
+.notif-ico {
+  width: 26px; height: 26px; flex: 0 0 26px;
+  display: inline-grid; place-items: center; border-radius: 7px; font-size: .78rem;
+}
+
+/* Full notification page rows. */
+.notif-row { display: flex; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--aa-line); }
+.notif-row:last-child { border-bottom: 0; }
+.notif-row.is-unread { background: var(--aa-red-tint); }
+.notif-row .notif-ico { width: 34px; height: 34px; flex-basis: 34px; font-size: .95rem; }
+
+/* POST actions preserve their link/card appearance and keyboard focus. */
+button.pos-item { width:100%; text-align:left; background:transparent; font:inherit; }
+button.text-muted.small,button.text-secondary { border:0; background:transparent; padding:0; }
+:focus-visible { outline:3px solid #2b4c7e; outline-offset:3px; }
+
+.pos-item:disabled { opacity:.45; cursor:not-allowed; transform:none; }
+.unit-chip button { border:0; background:none; color:inherit; padding:0 3px; }
+
+@media (max-width:991px) { .pos-cart { position:static; scroll-margin-top:100px; } #itemPicker { scroll-margin-top:100px; } }
+
+/* ---------------------------------------------------------------------
+   Till controls sized for a thumb (same comfort as the product form).
+   The scan box is the control a cashier touches most, and at phone width
+   the "Add piece" button was squeezing the field until its placeholder
+   was unreadable, so the button moves onto its own row instead.
+   16px text also stops iOS zooming the page when the field is focused.
+   --------------------------------------------------------------------- */
+#itemPicker .form-control,
+#itemPicker .form-select,
+#itemPicker .input-group-text,
+#scanForm .btn { min-height: 46px; font-size: 16px; }
+
+@media (max-width: 575.98px) {
+  #scanForm .input-group { flex-wrap: wrap; }
+  /* The barcode glyph is decoration (the field carries its own aria-label) and
+     at this width it only steals room from the code, so it steps aside. */
+  #scanForm .input-group > .input-group-text { display: none; }
+  #scanForm .input-group > .form-control {
+    flex: 1 1 100%;
+    width: 100%;
+    border-radius: .5rem !important;
+  }
+  #scanForm .input-group > .btn {
+    flex: 1 0 100%;
+    margin-top: 8px;
+    border-radius: .5rem !important;
+    min-height: 48px;
+  }
+}

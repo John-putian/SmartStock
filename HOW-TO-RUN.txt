@@ -1,0 +1,19 @@
+SMART STOCK — UPDATED RUN INSTRUCTIONS
+
+Read README.md first, especially if an installation already exists.
+
+NEW DEMO:
+Extract SmartStock into C:\xampp\htdocs. Start Apache and MySQL.
+Create an empty aa_inventory database in phpMyAdmin and import
+database\aa_inventory_snapshot_2026-10-02_1836.sql.
+Open http://localhost/SmartStock/. Use admin/admin123 or cashier/cashier123.
+Alternatively SETUP-DATABASE.cmd creates a fresh sample database and refuses
+to replace an existing one. install.php is intentionally disabled.
+
+EXISTING SYSTEM:
+Back up first. Replace application files while preserving configuration.
+Apply the additive migration in README.md only if Phase 1 columns are missing.
+Never import sample data, schema.sql or the snapshot into a live database.
+
+Change demo passwords before real use. SMTP and physical scanning/printing
+still need acceptance tests with the store's credentials and devices.

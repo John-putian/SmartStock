@@ -1,0 +1,58 @@
+# Smart Stock — what must never go into version control
+#
+# Written 6 November 2026. The two config files below contain live secrets:
+# a Gemini API key and a Gmail app password. If they are ever committed they
+# are in the history permanently, even if deleted in a later commit.
+#
+# Commit the .example variants instead. Each one shows the shape of the file
+# with the secret replaced by a placeholder.
+
+# --- live secrets ------------------------------------------------------
+config/photo-ai.local.php
+config/mail.php
+config/database.php
+
+# dated backups of config files — these hold old copies of the same secrets
+config/*.before-*
+config/*.bak
+config/*.old
+
+# --- local environment -------------------------------------------------
+# Uploaded product photos are the shop's data, not source code.
+assets/uploads/
+assets/products/
+
+# PHP / Apache noise
+*.log
+error_log
+php_errors.log
+
+# Windows / editor noise
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# Database dumps may contain real sales and real customer detail
+*.sql.gz
+*.sql.zip
+database/backups/
+database/*-dump.sql
+
+# Exports produced by the reports module
+exports/
+*.xlsx
+*.csv
+!database/*.csv
+
+# --- added 20 Nov 2026 for the GitHub upload ----------------------------
+# Videos are on YouTube; too large for the repository.
+*.mp4
+# Page copies used only to film the normalization video
+database/ads/_frames/
+# Full snapshot of the live database (real sales history)
+database/aa_inventory_snapshot_*.sql
+# Local demo-mode switch
+DEMO-MODE-ON

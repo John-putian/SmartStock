@@ -1,0 +1,87 @@
+﻿Smart Stock normalization proof - run 2026-11-20 17:09 on MariaDB 10.4.32 (XAMPP)
+
++---------------+-------------------+-----------------------------------------+----------------------------------------------------------------------------------+-----------------+-----------------------------+
+| invoice_no    | cashier_name      | item_skus                               | item_names                                                                       | item_quantities | item_unit_prices            |
++---------------+-------------------+-----------------------------------------+----------------------------------------------------------------------------------+-----------------+-----------------------------+
+| INV-202601103 | John Ray Puti-an  | AA-FUR-0012 | AA-FUR-0014               | Carved Wooden Shelf Rack | Cream Writing Desk with Drawer                        | 1 | 1           | 2200.00 | 2700.00           |
+| INV-202601102 | Rossen Dale Dizon | AA-SPT-0032 | AA-FUR-0001               | Tennis Racket Set with Cases | Fabric Tub Accent Chair                           | 1 | 1           | 1200.00 | 2800.00           |
+| INV-202601100 | John Ray Puti-an  | AA-DEC-0030 | AA-KWD-0027               | Framed Art Print, Ornate Gold Frame | Green-Rim Dessert Plate Set (5 pcs)        | 1 | 1           | 1800.00 | 580.00            |
+| INV-202601095 | John Ray Puti-an  | AA-FUR-0001 | AA-FUR-0006 | AA-FUR-0021 | Fabric Tub Accent Chair | Wooden Chest of Drawers | Cream Console Table 2-Drawer | 1 | 1 | 1       | 2800.00 | 4200.00 | 3400.00 |
+| INV-202601093 | John Ray Puti-an  | AA-FUR-0022 | AA-FUR-0015               | Black TV Stand / Media Cabinet | Wooden Sideboard 6-Drawer                       | 1 | 1           | 2900.00 | 5200.00           |
+| INV-202601092 | Rossen Dale Dizon | AA-FUR-0010 | AA-FUR-0008               | Metal-Frame Writing Desk | Executive Office Chair (Leather)                      | 1 | 1           | 2400.00 | 3800.00           |
+| INV-202601085 | Rossen Dale Dizon | AA-FUR-0015 | AA-FUR-0017               | Wooden Sideboard 6-Drawer | Louvre-Door Wooden Wardrobe                          | 1 | 1           | 5200.00 | 6200.00           |
+| INV-202601081 | Rossen Dale Dizon | AA-MUS-0031 | AA-KWD-0025               | Classical Acoustic Guitar | Ceramic Dinner Plate Set                             | 1 | 1           | 2200.00 | 650.00            |
+| INV-202601080 | Rossen Dale Dizon | AA-FUR-0006 | AA-MUS-0031               | Wooden Chest of Drawers | Classical Acoustic Guitar                              | 1 | 1           | 4200.00 | 2200.00           |
+| INV-202601075 | Rossen Dale Dizon | AA-FUR-0022 | AA-FUR-0024               | Black TV Stand / Media Cabinet | Drop-Leaf Table with Drawer                     | 1 | 1           | 2900.00 | 3200.00           |
++---------------+-------------------+-----------------------------------------+----------------------------------------------------------------------------------+-----------------+-----------------------------+
++---------------+-------------+-------------------------------------+----------------------+----------+------------+-------------------+
+| invoice_no    | sku         | product_name                        | category_name        | quantity | unit_price | cashier_name      |
++---------------+-------------+-------------------------------------+----------------------+----------+------------+-------------------+
+| INV-202601103 | AA-FUR-0012 | Carved Wooden Shelf Rack            | Furniture            |        1 |    2200.00 | John Ray Puti-an  |
+| INV-202601103 | AA-FUR-0014 | Cream Writing Desk with Drawer      | Furniture            |        1 |    2700.00 | John Ray Puti-an  |
+| INV-202601102 | AA-FUR-0001 | Fabric Tub Accent Chair             | Furniture            |        1 |    2800.00 | Rossen Dale Dizon |
+| INV-202601102 | AA-SPT-0032 | Tennis Racket Set with Cases        | Sports & Leisure     |        1 |    1200.00 | Rossen Dale Dizon |
+| INV-202601100 | AA-DEC-0030 | Framed Art Print, Ornate Gold Frame | Home Decor           |        1 |    1800.00 | John Ray Puti-an  |
+| INV-202601100 | AA-KWD-0027 | Green-Rim Dessert Plate Set (5 pcs) | Kitchenware & Dining |        1 |     580.00 | John Ray Puti-an  |
+| INV-202601095 | AA-FUR-0001 | Fabric Tub Accent Chair             | Furniture            |        1 |    2800.00 | John Ray Puti-an  |
+| INV-202601095 | AA-FUR-0006 | Wooden Chest of Drawers             | Furniture            |        1 |    4200.00 | John Ray Puti-an  |
+| INV-202601095 | AA-FUR-0021 | Cream Console Table 2-Drawer        | Furniture            |        1 |    3400.00 | John Ray Puti-an  |
+| INV-202601093 | AA-FUR-0015 | Wooden Sideboard 6-Drawer           | Furniture            |        1 |    5200.00 | John Ray Puti-an  |
+| INV-202601093 | AA-FUR-0022 | Black TV Stand / Media Cabinet      | Furniture            |        1 |    2900.00 | John Ray Puti-an  |
+| INV-202601092 | AA-FUR-0008 | Executive Office Chair (Leather)    | Furniture            |        1 |    3800.00 | Rossen Dale Dizon |
+| INV-202601092 | AA-FUR-0010 | Metal-Frame Writing Desk            | Furniture            |        1 |    2400.00 | Rossen Dale Dizon |
+| INV-202601085 | AA-FUR-0015 | Wooden Sideboard 6-Drawer           | Furniture            |        1 |    5200.00 | Rossen Dale Dizon |
+| INV-202601085 | AA-FUR-0017 | Louvre-Door Wooden Wardrobe         | Furniture            |        1 |    6200.00 | Rossen Dale Dizon |
+| INV-202601081 | AA-KWD-0025 | Ceramic Dinner Plate Set            | Kitchenware & Dining |        1 |     650.00 | Rossen Dale Dizon |
+| INV-202601081 | AA-MUS-0031 | Classical Acoustic Guitar           | Musical Instruments  |        1 |    2200.00 | Rossen Dale Dizon |
+| INV-202601080 | AA-FUR-0006 | Wooden Chest of Drawers             | Furniture            |        1 |    4200.00 | Rossen Dale Dizon |
+| INV-202601080 | AA-MUS-0031 | Classical Acoustic Guitar           | Musical Instruments  |        1 |    2200.00 | Rossen Dale Dizon |
+| INV-202601075 | AA-FUR-0022 | Black TV Stand / Media Cabinet      | Furniture            |        1 |    2900.00 | Rossen Dale Dizon |
+| INV-202601075 | AA-FUR-0024 | Drop-Leaf Table with Drawer         | Furniture            |        1 |    3200.00 | Rossen Dale Dizon |
++---------------+-------------+-------------------------------------+----------------------+----------+------------+-------------------+
++---------------+--------------------------------+--------------+
+| repeated_fact | value                          | times_stored |
++---------------+--------------------------------+--------------+
+| cashier name  | Rossen Dale Dizon              |           12 |
+| cashier name  | John Ray Puti-an               |            9 |
+| product name  | Black TV Stand / Media Cabinet |            2 |
+| product name  | Wooden Chest of Drawers        |            2 |
+| product name  | Classical Acoustic Guitar      |            2 |
+| product name  | Wooden Sideboard 6-Drawer      |            2 |
+| product name  | Fabric Tub Accent Chair        |            2 |
++---------------+--------------------------------+--------------+
++------------+-------+-----------------+
+| tbl        | rows_ | distinct_values |
++------------+-------+-----------------+
+| products   |    16 |              16 |
+| users      |     2 |               2 |
+| categories |     5 |               5 |
++------------+-------+-----------------+
++-------------------------+-----------+
+| stage_table             | row_count |
++-------------------------+-----------+
+| UNF  unf_sales_register |        10 |
+| 1NF  nf1_sales_lines    |        21 |
+| 2NF  nf2_sales          |        10 |
+| 2NF  nf2_products       |        16 |
+| 2NF  nf2_sale_items     |        21 |
+| 3NF  users              |         2 |
+| 3NF  categories         |         5 |
+| 3NF  products           |        16 |
+| 3NF  sales              |        10 |
+| 3NF  sale_items         |        21 |
++-------------------------+-----------+
++-------------------------+-----------------------+
+| rows_missing_after_join | rows_invented_by_join |
++-------------------------+-----------------------+
+|                       0 |                     0 |
++-------------------------+-----ERROR 1452 (23000) at line 83: Cannot add or update a child row: a foreign key constraint fails (`aa_normalization_demo`.`sale_items`, CONSTRAINT `fk_items_product` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`))
+------------------+
++-------------+-------------+--------------+------------+
+| child_table | foreign_key | parent_table | parent_key |
++-------------+-------------+--------------+------------+
+| products    | category_id | categories   | id         |
+| sales       | user_id     | users        | id         |
+| sale_items  | product_id  | products     | id         |
+| sale_items  | sale_id     | sales        | id         |
++-------------+-------------+--------------+------------+

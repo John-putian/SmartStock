@@ -1,0 +1,47 @@
+{
+  "name": "Smart Stock - A&A Surplus",
+  "short_name": "Smart Stock",
+  "description": "Inventory, sales and decision support for A&A Household Appliances Trading, Panabo City.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "./index.php?page=dashboard",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FBF9F6",
+  "theme_color": "#C41114",
+  "categories": ["business", "productivity"],
+  "icons": [
+    {
+      "src": "assets/img/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/app-icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Add an item",
+      "short_name": "Add item",
+      "url": "./index.php?page=inventory.create",
+      "icons": [{ "src": "assets/img/app-icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Point of Sale",
+      "short_name": "Till",
+      "url": "./index.php?page=pos",
+      "icons": [{ "src": "assets/img/app-icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

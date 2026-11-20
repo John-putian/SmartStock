@@ -1,0 +1,326 @@
+1
+00:00:05,000 --> 00:00:11,634
+This is Smart Stock, a web-based
+inventory, sales and decision support
+
+2
+00:00:11,714 --> 00:00:19,691
+system built for A and A Surplus, a Japan
+surplus appliance store in Panabo City. It
+
+3
+00:00:19,771 --> 00:00:25,734
+runs in a browser on the shop's own
+machine, keeps stock records in step with
+
+4
+00:00:25,814 --> 00:00:32,113
+every sale, and warns the office before
+popular items run out.
+
+5
+00:00:32,663 --> 00:00:39,149
+Access is role-based. Every person signs
+in with their own account, and what they
+
+6
+00:00:39,229 --> 00:00:45,118
+see afterwards depends on the job they do.
+The note under the heading is not
+
+7
+00:00:45,198 --> 00:00:52,281
+decoration: every action in this system is
+written to an audit trail against the
+
+8
+00:00:52,361 --> 00:00:54,370
+account that performed it.
+
+9
+00:00:58,518 --> 00:01:07,161
+Signed in as an administrator, the
+dashboard opens on the figures the office
+
+10
+00:01:07,241 --> 00:01:15,126
+needs. Sales so far today, revenue for the
+month, the number of pieces on the floor
+
+11
+00:01:15,206 --> 00:01:22,332
+and what they are worth, and how many
+items have fallen to or below their
+
+12
+00:01:22,412 --> 00:01:29,917
+reorder level. Note the figures as they
+stand now. Nothing has been sold today.
+
+13
+00:01:30,493 --> 00:01:37,379
+Inventory is the main master file.
+Thirty-four item types, forty- eight
+
+14
+00:01:37,459 --> 00:01:44,677
+pieces in total. Because these are
+second-hand appliances, every item carries
+
+15
+00:01:44,757 --> 00:01:51,311
+a condition grade alongside its cost, its
+selling price and its own barcode. The
+
+16
+00:01:51,391 --> 00:01:57,614
+catalogue can be searched and filtered,
+and exported to a spreadsheet.
+
+17
+00:01:58,185 --> 00:02:07,295
+Stock alerts separate the two problems
+that matter. Items that are already out of
+
+18
+00:02:07,375 --> 00:02:16,485
+stock and cannot be sold at all, and items
+at or below their reorder level that will
+
+19
+00:02:16,565 --> 00:02:24,840
+run out soon. Each one carries a restock
+action, so the warning leads somewhere.
+
+20
+00:02:25,593 --> 00:02:32,374
+The reports module covers sales and
+revenue, inventory valuation and stock
+
+21
+00:02:32,454 --> 00:02:40,171
+movement, over any date range. Everything
+reads zero at the moment, because no sale
+
+22
+00:02:40,251 --> 00:02:44,537
+has been recorded today. Watch these
+figures later.
+
+23
+00:02:44,936 --> 00:02:51,645
+Price approvals are how the shop controls
+discounting. A member of staff who wants
+
+24
+00:02:51,725 --> 00:02:58,433
+to drop a price has to ask, and give a
+reason. Here, chipped veneer on one chair,
+
+25
+00:02:58,513 --> 00:03:05,222
+and a desk that has been sitting on the
+floor for six weeks. Until a manager
+
+26
+00:03:05,302 --> 00:03:11,332
+decides, nothing changes, and the decision
+is stamped with their name.
+
+27
+00:03:13,812 --> 00:03:21,475
+Signing out, and back in as a cashier, to
+show the same system from the other side
+
+28
+00:03:21,555 --> 00:03:22,950
+of the counter.
+
+29
+00:03:25,192 --> 00:03:32,736
+This is the same application, but the
+cashier sees a different screen and a
+
+30
+00:03:32,816 --> 00:03:39,978
+shorter menu. Their own takings for the
+day, the pieces that have left the shop,
+
+31
+00:03:40,058 --> 00:03:47,983
+what is still on the floor, and what is
+running low. The administration modules
+
+32
+00:03:48,063 --> 00:03:55,607
+are not hidden from view here, they are
+not available to this account at all.
+
+33
+00:03:56,035 --> 00:04:03,323
+The point of sale lists the stock as
+cards, with a photograph, the condition
+
+34
+00:04:03,403 --> 00:04:11,079
+grade, the price and how many are left. An
+item can be found by searching, or by
+
+35
+00:04:11,159 --> 00:04:18,447
+scanning the barcode printed on the piece
+itself. Notice the green note on the
+
+36
+00:04:18,527 --> 00:04:26,591
+right: a ten per cent discount has already
+been approved by the store manager.
+
+37
+00:04:27,006 --> 00:04:33,462
+Adding an item builds the sale. The
+subtotal is two thousand nine hundred
+
+38
+00:04:33,542 --> 00:04:40,651
+pesos, the approved discount takes two
+hundred and ninety off, and the total
+
+39
+00:04:40,731 --> 00:04:46,861
+falls to two thousand six hundred and ten.
+The code beneath the item is the
+
+40
+00:04:46,941 --> 00:04:51,109
+individual piece being sold, not just the
+product type.
+
+41
+00:04:52,355 --> 00:04:58,622
+The cashier enters the amount handed over.
+Three thousand pesos, and the change due
+
+42
+00:04:58,702 --> 00:05:03,457
+is worked out immediately: three hundred
+and ninety.
+
+43
+00:05:04,737 --> 00:05:11,918
+Completing the sale produces the receipt.
+The invoice number, the cashier's name,
+
+44
+00:05:11,998 --> 00:05:18,834
+the unit code of the piece sold, the
+discount and who approved it. The message
+
+45
+00:05:18,914 --> 00:05:26,095
+above it is the important part: inventory
+has already been updated.
+
+46
+00:05:28,575 --> 00:05:36,280
+Back on the cashier's dashboard, every
+figure has moved. One sale, two thousand
+
+47
+00:05:36,360 --> 00:05:43,323
+six hundred and ten pesos at this till.
+Pieces on the floor have dropped from
+
+48
+00:05:43,403 --> 00:05:51,478
+forty-eight to forty-seven. The item sold
+now shows zero left, and it has appeared
+
+49
+00:05:51,558 --> 00:05:58,892
+at the top of the running- low list. The
+movement log records it against the
+
+50
+00:05:58,972 --> 00:06:00,375
+invoice number.
+
+51
+00:06:04,371 --> 00:06:11,561
+The office sees the same thing without
+doing anything. Sales today are no longer
+
+52
+00:06:11,641 --> 00:06:19,177
+zero. Inventory on hand has fallen to
+forty-seven, the stock value has dropped
+
+53
+00:06:19,257 --> 00:06:26,100
+by the cost of the item sold, and the
+alert count has risen from eight to nine.
+
+54
+00:06:26,180 --> 00:06:31,985
+One transaction at the till, and the whole
+system is consistent.
+
+55
+00:06:34,966 --> 00:06:42,064
+The same report that read zero a few
+minutes ago now shows the transaction, the
+
+56
+00:06:42,144 --> 00:06:49,569
+revenue, the average sale value, and the
+discount given as a percentage of revenue.
+
+57
+00:06:49,649 --> 00:06:56,095
+Reports read from the same tables the till
+writes to, so they cannot fall out of
+
+58
+00:06:56,175 --> 00:06:56,875
+date.
+
+59
+00:07:02,213 --> 00:07:10,560
+This is the decision support the system is
+named for. Six months of trading, six
+
+60
+00:07:10,640 --> 00:07:18,986
+hundred and seventy-two transactions, and
+a least- squares trend line extended three
+
+61
+00:07:19,066 --> 00:07:27,413
+months forward. The solid bars are what
+was actually taken. The dashed line is the
+
+62
+00:07:27,493 --> 00:07:35,438
+projection the office uses to decide what
+the next container should carry.
+
+63
+00:07:35,872 --> 00:07:42,036
+Finally, the audit trail, which has been
+recording this demonstration as it
+
+64
+00:07:42,116 --> 00:07:48,593
+happened. The cashier signing in, the
+discount applied and who approved it, the
+
+65
+00:07:48,673 --> 00:07:56,086
+completed sale with its invoice number and
+total, and the administrator signing back
+
+66
+00:07:56,166 --> 00:08:00,769
+in. Every entry names the account
+responsible.
+
